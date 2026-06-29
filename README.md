@@ -19,6 +19,18 @@ The dashboard is being developed as part of my professional data analytics portf
 
 ---
 
+## Key Business Insights
+
+The Executive Dashboard provides immediate visibility into several important business trends:
+
+- Technology generates the highest overall sales among product categories.
+- The West region leads the business in total sales, followed closely by the East region.
+- Sales and profit generally trend upward over the four-year period, with noticeable monthly fluctuations.
+- Profit does not always increase proportionally with sales, highlighting opportunities to investigate discounting and operational efficiency.
+- Executive KPIs allow business leaders to quickly monitor revenue, profitability, order volume, quantity sold, and average discount from a single dashboard.
+
+---
+
 ## Business Objectives
 
 This dashboard answers several important business questions:
