@@ -83,6 +83,23 @@ This dashboard answers several important business questions:
 
 ---
 
+## Development Process
+
+This dashboard was developed from the ground up using industry-standard business intelligence practices.
+
+The project includes:
+
+* Importing and cleaning raw retail sales data using Power Query.
+* Designing a relational data model to support accurate reporting.
+* Creating DAX measures for executive KPIs and business calculations.
+* Building interactive Power BI visualizations focused on executive decision-making.
+* Applying dashboard design principles to improve readability and user experience.
+* Managing project documentation and version control through Git and GitHub.
+
+Rather than focusing solely on visualization, this project emphasizes the complete analytics workflow—from raw data preparation through executive reporting.
+
+
+---
 ## Project Status
 
 🚧 Currently in active development.
