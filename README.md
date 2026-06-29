@@ -1,4 +1,5 @@
 # Executive Retail Analytics Dashboard
+![Executive Dashboard](Images/ExecutiveDashboard.png)
 
 ## Project Overview
 
