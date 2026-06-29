@@ -133,4 +133,8 @@ Executive-Retail-Analytics-Dashboard/
 
 **Jesse Luffman**
 
-Bachelor of Information Technology student with a concentration in Data Analytics, building a portfolio of real-world business intelligence and analytics projects using Power BI.
+Associate of Computer Science graduate with a concentration in Data Analytics and currently pursuing a Bachelor of Information Technology.
+
+This portfolio showcases hands-on projects focused on business intelligence, data analytics, Power BI, SQL, Excel, and data visualization. Each project is designed to demonstrate practical analytical skills, technical growth, and the ability to transform data into meaningful business insights.
+
+* GitHub: https://github.com/Jessewyatt24
