@@ -7,6 +7,16 @@ This project is an interactive Power BI dashboard built using the Sample Superst
 
 The dashboard is being developed as part of my professional data analytics portfolio to demonstrate practical business intelligence and data visualization skills.
 
+## Project Highlights
+
+- 📈 Built an executive-level Power BI dashboard using the Sample Superstore dataset.
+- 📊 Developed interactive KPI cards to monitor business performance.
+- 📅 Created a time-series analysis of monthly sales and profit trends.
+- 🛍️ Visualized sales performance by product category.
+- 🌎 Compared regional sales performance across four business regions.
+- ⚡ Utilized DAX measures and Power Query for data modeling and business calculations.
+- 🎯 Designed with executive reporting and business decision-making in mind.
+
 ---
 
 ## Business Objectives
