@@ -1,214 +1,140 @@
-
 # Executive Retail Analytics Dashboard
 
-![Executive Dashboard](Images/ExecutiveDashboard.png)
+![Executive Sales Overview](Images/ExecutiveDashboard.png)
 
-> **An executive-focused Power BI dashboard that transforms retail sales data into actionable business insights through interactive reporting, KPI monitoring, and data visualization.**
+> A two-page Power BI business intelligence dashboard designed to turn retail transaction data into an executive overview and an interactive year-by-year performance analysis.
 
----
+## Project Overview
 
-# Project Overview
+This project uses the Sample Superstore dataset to demonstrate an end-to-end Power BI workflow: data preparation, modeling, DAX measures, KPI development, time intelligence, interactive filtering, and dashboard design.
 
-The Executive Retail Analytics Dashboard is an end-to-end Business Intelligence project built in Microsoft Power BI using the Sample Superstore dataset. The objective was to design an executive dashboard capable of monitoring organizational performance while allowing business leaders to quickly identify trends, regional opportunities, and product performance.
+The report is built around two complementary views:
 
-Rather than simply creating charts, this project follows the complete analytics workflow—from raw data preparation and modeling through DAX development, visualization design, and executive reporting.
+- **Executive Sales Overview** — a high-level summary of overall business performance.
+- **Sales Trends & Performance** — an interactive year-level analysis of sales growth, profitability, category performance, customer segments, and monthly trends.
 
----
+The goal was not simply to display charts, but to create a report that a business leader could scan quickly and then use to investigate changes in performance.
 
-# Business Problem
+## Dashboard Highlights
 
-Business leaders often have access to large amounts of operational data but lack a centralized view that summarizes performance in a meaningful way.
+The Executive Sales Overview summarizes the full dataset with six headline KPIs:
 
-This dashboard addresses that challenge by consolidating critical business metrics into a single interactive report capable of answering questions such as:
+| KPI | Result |
+| --- | ---: |
+| Total Sales | $2.30M |
+| Total Profit | $286.40K |
+| Total Orders | 5K |
+| Total Customers | 793 |
+| Profit Margin | 12.47% |
+| Average Order Value | $458.61 |
 
-* How is the business performing overall?
-* Which regions generate the highest sales?
-* Which product categories drive revenue?
-* How are sales and profits changing over time?
-* Which KPIs should executives monitor daily?
+It also compares sales across product categories and regions and shows the relationship between monthly sales and profit across 2014–2017.
 
----
+## Interactive Sales Trends & Performance
 
-# Dashboard Preview
+The second report page adds a year slicer for 2014–2017 and updates the report dynamically. It includes:
 
-## Executive Overview
+- Profit Margin KPI
+- Year-over-Year Sales Growth KPI
+- Conditional KPI formatting for positive and negative YoY growth
+- Sales and Profit by Category
+- Sales by Customer Segment
+- Monthly Sales Trend
+- Monthly Profit
 
-![Executive Dashboard](Images/ExecutiveDashboard.png)
+For 2014, YoY growth is intentionally displayed as unavailable because no prior-year comparison exists.
 
-Current dashboard includes:
+## Key Findings
 
-* Executive KPI cards
-* Monthly Sales & Profit Trend
-* Sales by Category
-* Sales by Region
+- **Technology** generated the highest overall sales among the three product categories.
+- The **West** was the strongest region by total sales, followed by the East.
+- Overall performance reached approximately **$2.30M in sales** and **$286.4K in profit**, producing a **12.47% profit margin**.
+- Sales declined **2.83% year over year in 2015** before rebounding strongly with **29.47% growth in 2016**.
+- Growth remained positive in 2017 at **20.36%**, showing that the 2016 recovery continued into the following year.
+- Consumer customers represented the largest share of sales across the yearly segment views.
+- Monthly sales and monthly profit do not always move proportionally, reinforcing the importance of monitoring profitability alongside revenue.
 
----
+## Business Questions Addressed
 
-# Key Performance Indicators
+This dashboard was designed to answer questions such as:
 
-The Executive Dashboard tracks several core business metrics:
+- How is the business performing overall?
+- Which product categories generate the most revenue and profit?
+- Which geographic regions lead sales performance?
+- How have sales and profit changed over time?
+- Is annual sales performance improving or declining compared with the previous year?
+- Which customer segments contribute the largest share of sales?
+- Which months show unusually strong or weak performance?
 
-| KPI              | Description                     |
-| ---------------- | ------------------------------- |
-| Total Sales      | Overall company revenue         |
-| Total Profit     | Total profit generated          |
-| Profit Margin    | Profit as a percentage of sales |
-| Total Orders     | Number of customer orders       |
-| Quantity Sold    | Total units sold                |
-| Average Discount | Average customer discount       |
+## Data Model & DAX
 
----
+A dedicated Date Table supports monthly analysis and year-over-year calculations. Reusable measures were organized separately from raw fields to keep the model easier to maintain.
 
-# Business Insights
+Core measures include:
 
-Current analysis highlights several important findings:
+- Total Sales
+- Total Profit
+- Total Orders
+- Total Customers
+- Average Order Value
+- Profit Margin
+- YoY Sales Growth %
 
-* Technology generates the highest overall sales among all product categories.
-* The West region currently leads overall sales performance.
-* Monthly sales demonstrate a consistent long-term upward trend with seasonal variation.
-* Profit growth does not always mirror sales growth, indicating opportunities to evaluate pricing and discount strategies.
-* Executive KPI monitoring enables rapid assessment of overall business health from a single dashboard.
+The YoY measure compares the selected year's sales against the prior year and feeds conditional formatting on the KPI card so declines appear red and positive growth appears green.
 
----
+## Design Approach
 
-# Features
+The visual design uses consistent semantic colors across both pages:
 
-### Executive Overview
+- **Blue** represents sales.
+- **Green** represents profit and positive performance.
+- **Red** identifies negative year-over-year growth.
+- Neutral gray/black styling is used for the primary year-selection control.
 
-* Executive KPI Cards
-* Interactive Sales Trend Analysis
-* Regional Sales Comparison
-* Product Category Performance
-* Interactive Visualizations
+The report uses aligned visual containers, consistent typography, KPI cards, simplified axis labeling, and restrained formatting to keep the focus on the business information.
 
-### Planned Dashboard Pages
+## Tools & Skills Demonstrated
 
-* Customer Analytics
-* Product Intelligence
-* Shipping Performance
-* Executive Insights
-* Interactive Slicers
-* Drill-through Analysis
+- Microsoft Power BI
+- Power Query
+- DAX / Time Intelligence
+- Data Cleaning & Transformation
+- Data Modeling
+- Date Table Development
+- KPI Design
+- Conditional Formatting
+- Interactive Slicers
+- Business Intelligence Reporting
+- Data Visualization
+- Analytical Storytelling
+- Git & GitHub
 
----
+## Dataset
 
-# Dataset
+The project uses the **Sample Superstore** retail dataset, containing order-level information including customers, products, categories, sales, profit, discounts, shipping information, dates, and geographic regions.
 
-This project uses the **Sample Superstore** dataset, a widely recognized dataset used for Business Intelligence and Power BI portfolio projects.
+The dataset is included in the `Data` directory for reproducibility.
 
-The dataset includes:
-
-* Customer Orders
-* Product Categories
-* Sales
-* Profit
-* Discounts
-* Shipping Information
-* Geographic Regions
-
----
-
-# Technologies Used
-
-* Microsoft Power BI
-* Power Query
-* DAX (Data Analysis Expressions)
-* Data Modeling
-* Microsoft Excel
-* Git
-* GitHub
-
----
-
-# Skills Demonstrated
-
-This project demonstrates practical experience in:
-
-* Data Cleaning
-* Data Transformation
-* Data Modeling
-* DAX Measure Development
-* KPI Design
-* Executive Dashboard Design
-* Business Intelligence Reporting
-* Data Visualization
-* Analytical Storytelling
-* Version Control using Git & GitHub
-
----
-
-# Development Process
-
-This project was built using a structured Business Intelligence workflow.
-
-### 1. Data Preparation
-
-* Imported raw retail data
-* Cleaned and transformed data with Power Query
-* Standardized fields for reporting
-
-### 2. Data Modeling
-
-* Built a relational data model
-* Created a custom Date Table
-* Developed reusable DAX measures
-
-### 3. Dashboard Development
-
-* Designed executive KPI cards
-* Built interactive charts and visualizations
-* Focused on readability and executive decision-making
-
-### 4. Documentation
-
-* Managed project documentation with GitHub
-* Organized project assets into dedicated folders
-* Documented development progress throughout the project lifecycle
-
----
-
-# Repository Structure
+## Repository Structure
 
 ```text
 executive-retail-analytics-dashboard/
-│
 ├── README.md
 ├── ExecutiveRetailAnalyticsDashboard.pbix
 ├── Images/
 │   └── ExecutiveDashboard.png
-├── Data/
-├── Docs/
-├── LICENSE
-└── .gitignore
+└── Data/
+    └── Sample - Superstore.csv
 ```
 
----
+## Project Status
 
-# Project Status
+**Portfolio-ready dashboard — completed August 2026.**
 
-🚧 **Active Development**
+The current version contains the finished Executive Sales Overview and Sales Trends & Performance pages and has been reviewed across all four available years to verify filtering, KPI behavior, conditional formatting, and visual scaling.
 
-Upcoming enhancements include:
+## Author
 
-* Regional Intelligence Dashboard
-* Product Intelligence Dashboard
-* Customer Analysis
-* Shipping Analysis
-* Forecasting
-* Advanced DAX Measures
-* Interactive Slicers
-* Dashboard Theme Polish
-* Mobile Layout Optimization
+### Jesse Luffman
 
----
-
-# About the Author
-
-## Jesse Luffman
-
-Associate of Computer Science graduate with a concentration in Data Analytics and currently pursuing a Bachelor of Information Technology.
-
-I enjoy building Business Intelligence solutions that transform raw data into meaningful insights. My current focus is developing practical skills in Power BI, SQL, Excel, data visualization, and analytics through hands-on portfolio projects.
-
-GitHub:
-https://github.com/Jessewyatt24
+Data analytics professional and Bachelor of Information Technology student focused on building practical business intelligence and analytics projects with Power BI, SQL, Excel, and related data tools.
