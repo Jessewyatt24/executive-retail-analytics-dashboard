@@ -2,22 +2,19 @@
 
 ![Executive Sales Overview](Images/ExecutiveDashboard.png)
 
-> A two-page Power BI business intelligence dashboard designed to turn retail transaction data into an executive overview and an interactive year-by-year performance analysis.
+## Executive Summary
 
-## Project Overview
+This Power BI dashboard analyzes retail performance across sales, profit, customers, product categories, regions, and time. I built the report to give leadership a quick view of overall performance while still making it easy to move from the big picture into the areas driving those results.
 
-This project uses the Sample Superstore dataset to demonstrate an end-to-end Power BI workflow: data preparation, modeling, DAX measures, KPI development, time intelligence, interactive filtering, and dashboard design.
+Across the full reporting period, the business generated **$2.30M in sales** and **$286.40K in profit** from approximately **5,000 orders** and **793 customers**, resulting in a **12.47% profit margin** and an **average order value of $458.61**.
 
-The report is built around two complementary views:
+The strongest overall sales came from the **Technology** category, while the **West** led regional performance. Annual results were less consistent: sales declined in 2015 before recovering sharply in 2016 and continuing to grow in 2017.
 
-- **Executive Sales Overview** — a high-level summary of overall business performance.
-- **Sales Trends & Performance** — an interactive year-level analysis of sales growth, profitability, category performance, customer segments, and monthly trends.
+## Performance Overview
 
-The goal was not simply to display charts, but to create a report that a business leader could scan quickly and then use to investigate changes in performance.
+The executive view brings the primary business measures into one place so overall performance can be reviewed without having to work through individual transaction records or separate reports.
 
-## Dashboard Highlights
-
-The Executive Sales Overview summarizes the full dataset with six headline KPIs:
+### Key Results
 
 | KPI | Result |
 | --- | ---: |
@@ -28,65 +25,50 @@ The Executive Sales Overview summarizes the full dataset with six headline KPIs:
 | Profit Margin | 12.47% |
 | Average Order Value | $458.61 |
 
-It also compares sales across product categories and regions and shows the relationship between monthly sales and profit across 2014–2017.
+Technology produced approximately **$0.84M in sales**, ahead of Furniture at **$0.74M** and Office Supplies at **$0.72M**. Regionally, the West generated approximately **$0.73M**, followed by the East at **$0.68M**. Central and South trailed the two leading regions, creating a clear difference in regional contribution.
 
-## Interactive Sales Trends & Performance
+The monthly view also shows that sales and profit do not always move at the same rate. Higher revenue does not automatically produce a proportional increase in profit, which makes profitability an important part of evaluating performance rather than relying on sales alone.
 
-The second report page adds a year slicer for 2014–2017 and updates the report dynamically. Selecting a year filters category, segment, monthly sales, and monthly profit performance while recalculating Profit Margin and Year-over-Year Sales Growth.
+## Year-over-Year Performance
 
-### 2015 — Negative YoY Growth
+The second page focuses on how the business changed from year to year. Selecting a year updates profit margin, year-over-year sales growth, category results, customer segment mix, monthly sales, and monthly profit so each period can be evaluated in the same context.
+
+### 2015 Performance
 
 ![2015 Sales Trends and Performance](Images/SalesTrends2015.png)
 
-In 2015, sales declined **2.83% year over year**. The YoY Sales Growth KPI automatically displays the negative result in **red**, making declining performance immediately visible.
+Sales declined **2.83% year over year in 2015**, while profit margin finished at **13.10%**. The monthly results show an uneven year, with stronger sales late in the period helping offset weaker performance earlier in the year.
 
-### 2016 — Positive YoY Growth
+### 2016 Performance
 
 ![2016 Sales Trends and Performance](Images/SalesTrends2016.png)
 
-In 2016, sales rebounded with **29.47% year-over-year growth**. The same KPI automatically changes to **green** when growth is positive, demonstrating conditional formatting driven by the underlying DAX measure.
+Performance changed considerably in 2016. Sales increased **29.47% year over year**, the strongest annual growth in the reporting period, while profit margin improved to **13.43%**. Sales strengthened during the second half of the year and finished with particularly strong results in the final months.
 
-Together, these views demonstrate that the dashboard is not a static report: the year slicer drives the page, measures recalculate with filter context, and KPI formatting responds dynamically to business performance.
+Growth continued into 2017 at **20.36%**, although profit margin decreased to **12.74%**. Taken together, the annual results show a business that recovered strongly from the 2015 decline while still requiring attention to the relationship between revenue growth and profitability.
 
-The interactive page includes:
+## Business Insights
 
-- Profit Margin KPI
-- Year-over-Year Sales Growth KPI
-- Conditional KPI formatting for positive and negative YoY growth
-- Sales and Profit by Category
-- Sales by Customer Segment
-- Monthly Sales Trend
-- Monthly Profit
+Several findings stand out across the report:
 
-For 2014, YoY growth is intentionally displayed as unavailable because no prior-year comparison exists.
+- **Technology leads category sales**, making it the largest revenue contributor across the full reporting period.
+- **West and East lead regional sales**, while Central and South represent the weaker regional results.
+- **Consumer is the largest customer segment**, accounting for the greatest share of sales in the yearly views.
+- **2015 was the only year with negative year-over-year growth** in the available comparison period.
+- **2016 produced the strongest annual recovery**, with sales growth of 29.47% and the highest profit margin among the displayed yearly views.
+- **Revenue and profit do not move proportionally every month**, making margin and profit performance necessary alongside sales when evaluating results.
 
-## Key Findings
+## Business Use
 
-- **Technology** generated the highest overall sales among the three product categories.
-- The **West** was the strongest region by total sales, followed by the East.
-- Overall performance reached approximately **$2.30M in sales** and **$286.4K in profit**, producing a **12.47% profit margin**.
-- Sales declined **2.83% year over year in 2015** before rebounding strongly with **29.47% growth in 2016**.
-- Growth remained positive in 2017 at **20.36%**, showing that the 2016 recovery continued into the following year.
-- Consumer customers represented the largest share of sales across the yearly segment views.
-- Monthly sales and monthly profit do not always move proportionally, reinforcing the importance of monitoring profitability alongside revenue.
+The report is designed to support common management questions without requiring separate analysis for each one. It can be used to review overall business performance, identify leading categories and regions, compare annual results, examine customer segment contribution, and isolate months where sales or profitability changed materially.
 
-## Business Questions Addressed
+The year-level view also makes it possible to move from an overall result into the underlying monthly and category performance without changing reports. This keeps the executive summary and the supporting analysis connected.
 
-This dashboard was designed to answer questions such as:
+## Power BI Development
 
-- How is the business performing overall?
-- Which product categories generate the most revenue and profit?
-- Which geographic regions lead sales performance?
-- How have sales and profit changed over time?
-- Is annual sales performance improving or declining compared with the previous year?
-- Which customer segments contribute the largest share of sales?
-- Which months show unusually strong or weak performance?
+I built the project in Microsoft Power BI using the Sample Superstore dataset. The model includes a dedicated Date Table to support monthly reporting and year-over-year comparisons, along with reusable DAX measures separated from the raw dataset.
 
-## Data Model & DAX
-
-A dedicated Date Table supports monthly analysis and year-over-year calculations. Reusable measures were organized separately from raw fields to keep the model easier to maintain.
-
-Core measures include:
+Key measures developed for the report include:
 
 - Total Sales
 - Total Profit
@@ -94,42 +76,19 @@ Core measures include:
 - Total Customers
 - Average Order Value
 - Profit Margin
-- YoY Sales Growth %
+- Year-over-Year Sales Growth %
 
-The YoY measure compares the selected year's sales against the prior year and feeds conditional formatting on the KPI card so declines appear red and positive growth appears green.
+The report also uses filter context, time-intelligence calculations, interactive slicing, and conditional formatting to keep the analysis responsive as the selected reporting period changes. For 2014, year-over-year growth is intentionally unavailable because the dataset does not contain the prior-year data required for a valid comparison.
 
-## Design Approach
+## Tools & Skills
 
-The visual design uses consistent semantic colors across both pages:
-
-- **Blue** represents sales.
-- **Green** represents profit and positive performance.
-- **Red** identifies negative year-over-year growth.
-- Neutral gray/black styling is used for the primary year-selection control.
-
-The report uses aligned visual containers, consistent typography, KPI cards, simplified axis labeling, and restrained formatting to keep the focus on the business information.
-
-## Tools & Skills Demonstrated
-
-- Microsoft Power BI
-- Power Query
-- DAX / Time Intelligence
-- Data Cleaning & Transformation
-- Data Modeling
-- Date Table Development
-- KPI Design
-- Conditional Formatting
-- Interactive Slicers
-- Business Intelligence Reporting
-- Data Visualization
-- Analytical Storytelling
-- Git & GitHub
+**Power BI · Power Query · DAX · Data Modeling · Data Cleaning · Time Intelligence · KPI Development · Interactive Reporting · Data Visualization · Business Analysis · Git · GitHub**
 
 ## Dataset
 
-The project uses the **Sample Superstore** retail dataset, containing order-level information including customers, products, categories, sales, profit, discounts, shipping information, dates, and geographic regions.
+The analysis uses the **Sample Superstore** retail dataset, which contains order-level information covering sales, profit, customers, products, categories, discounts, shipping, dates, and geographic regions.
 
-The dataset is included in the `Data` directory for reproducibility.
+The source data is included in the `Data` directory for reproducibility.
 
 ## Repository Structure
 
@@ -147,16 +106,14 @@ executive-retail-analytics-dashboard/
     └── Sample - Superstore.csv
 ```
 
-All four year-filtered screenshots are retained in the repository for reference, while the README highlights 2015 and 2016 because they provide the clearest visual comparison of negative and positive YoY conditional formatting.
-
 ## Project Status
 
-**Portfolio-ready dashboard — completed August 2026.**
+**Completed — August 2026**
 
-The current version contains the finished Executive Sales Overview and Sales Trends & Performance pages and has been reviewed across all four available years to verify filtering, KPI behavior, conditional formatting, and visual scaling.
+The final report contains an Executive Sales Overview and an interactive Sales Trends & Performance page covering all four years available in the dataset.
 
 ## Author
 
 ### Jesse Luffman
 
-Data analytics professional and Bachelor of Information Technology student focused on building practical business intelligence and analytics projects with Power BI, SQL, Excel, and related data tools.
+Data analytics professional and Bachelor of Information Technology student focused on using data to answer practical business questions and communicate the results clearly through business intelligence and analytics tools.
