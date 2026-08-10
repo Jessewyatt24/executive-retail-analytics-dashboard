@@ -32,7 +32,23 @@ It also compares sales across product categories and regions and shows the relat
 
 ## Interactive Sales Trends & Performance
 
-The second report page adds a year slicer for 2014–2017 and updates the report dynamically. It includes:
+The second report page adds a year slicer for 2014–2017 and updates the report dynamically. Selecting a year filters category, segment, monthly sales, and monthly profit performance while recalculating Profit Margin and Year-over-Year Sales Growth.
+
+### 2015 — Negative YoY Growth
+
+![2015 Sales Trends and Performance](Images/SalesTrends2015.png)
+
+In 2015, sales declined **2.83% year over year**. The YoY Sales Growth KPI automatically displays the negative result in **red**, making declining performance immediately visible.
+
+### 2016 — Positive YoY Growth
+
+![2016 Sales Trends and Performance](Images/SalesTrends2016.png)
+
+In 2016, sales rebounded with **29.47% year-over-year growth**. The same KPI automatically changes to **green** when growth is positive, demonstrating conditional formatting driven by the underlying DAX measure.
+
+Together, these views demonstrate that the dashboard is not a static report: the year slicer drives the page, measures recalculate with filter context, and KPI formatting responds dynamically to business performance.
+
+The interactive page includes:
 
 - Profit Margin KPI
 - Year-over-Year Sales Growth KPI
@@ -122,10 +138,16 @@ executive-retail-analytics-dashboard/
 ├── README.md
 ├── ExecutiveRetailAnalyticsDashboard.pbix
 ├── Images/
-│   └── ExecutiveDashboard.png
+│   ├── ExecutiveDashboard.png
+│   ├── SalesTrends2014.png
+│   ├── SalesTrends2015.png
+│   ├── SalesTrends2016.png
+│   └── SalesTrends2017.png
 └── Data/
     └── Sample - Superstore.csv
 ```
+
+All four year-filtered screenshots are retained in the repository for reference, while the README highlights 2015 and 2016 because they provide the clearest visual comparison of negative and positive YoY conditional formatting.
 
 ## Project Status
 
